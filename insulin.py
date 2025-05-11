@@ -22,8 +22,8 @@ def set_insulin_injection_point( sgv , unixtime ) :
 
     f_offset = sgv + tolerance
     
-    expected_peak_time = unixtime - insulin_active_period
+    expected_peak_time = unixtime - insulin_active_period/2
 
-    effective_period_end = unixtime + 
+    effective_period_end = unixtime - insulin_active_period
 
 

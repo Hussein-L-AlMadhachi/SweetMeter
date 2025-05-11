@@ -67,8 +67,17 @@ def Entries():
     if not "sgv" in sensor_data:
         return "" , 403
 
+    print( "sensor data: at", time.time()*1000 ,"\n   " , sensor_data )
+
     # delta calculation
     with data_lock:
+        # unixtime is sent in millisecond. converting to seconds
+        data["unixtime"] = sensor_data["date"] // 1000
+        
+        if time.time() > data["unixtime"] + 60*15 :
+            return  jsonify([]) , 200
+
+
         if data["delta-sgv"] != None:
             data["delta-sgv"] = sensor_data["sgv"] - data["last-sgv"]
             data["last-sgv"] = sensor_data["sgv"]
@@ -77,9 +86,7 @@ def Entries():
             data["last-sgv"] = sensor_data["sgv"]
 
         data["sgv"] = sensor_data["sgv"]
-        
-        # unixtime is sent in millisecond. converting to seconds
-        data["unixtime"] = sensor_data["date"] // 1000 
+
 
 
         plot_window.push( data["sgv"] )
@@ -88,6 +95,8 @@ def Entries():
 
         TelegramBot.send_plot()
         TelegramBot.sendReading( sensor_data["sgv"] , data[ "delta-sgv" ] , data[ "enhanced-delta" ] )
+    
+    return  jsonify([]) , 200
 
     return f'""\t{sensor_data["date"]}\t{sensor_data["sgv"]}\t\"{sensor_data["direction"]}\"\t\"sensor_data["device"]\"' , 200
 
