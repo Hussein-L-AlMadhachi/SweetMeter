@@ -20,7 +20,9 @@
 
 ## ⚙️ Installation
 
-git clone https://github.com/yourusername/sweetmeter.git
+```
+git clone https://github.com/Hussein-L-AlMadhachi/SweetMeter.git
+```
 cd sweetmeter
 pip install -r requirements.txt
 # Edit config.json to suit your setup
