@@ -72,12 +72,54 @@ SweetMeter supports over 35 languages using JSON-based translation files.
 
 - Automatically selects language via Accept-Language header  
 - Falls back to English if a word is missing  
-- Add your own translations in the locales/ folder  
+- Add your own translations in the localization/
+- use existing files
+
+##### builtin supported languages:
+* `english`
+* `arabic`
+* `amharic`
+* `czech`
+* `french`
+* `hausa`
+* `italian`
+* `kurdish_kurmanji`
+* `marathi`
+* `persian`
+* `romanian`
+* `swahili`
+* `telugu`
+* `ukrainian`
+* `dutch`
+* `german`
+* `hindi`
+* `japanese`
+* `kurdish_sorani`
+* `mongolian`
+* `polish`
+* `russian`
+* `tagalog`
+* `thai`
+* `urdu`
+* `bengali`
+* `greek`
+* `indonesian`
+* `korean`
+* `mandarin`
+* `pashto`
+* `portuguese`
+* `spanish`
+* `tamil`
+* `turkish`
+* `vietnamese`
+
+just put any of those in the `language` field in `config.json` and it will work
+
+> check `sweetmeter.log` for any errors
 
 ## 🔒 Privacy Focused
 
-- No analytics, trackers, or telemetry  
-- 100% offline-capable  
+- No analytics, trackers, or telemetry what-so-ever
 - Ideal for personal and clinical use if glocuse readings are accurate  
 
 ## 🧪 Battle-Tested
