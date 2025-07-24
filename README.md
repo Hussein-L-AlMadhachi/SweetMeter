@@ -55,7 +55,7 @@ Description=SweetMeter CGM Server
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /path/to/sweetmeter/main.py
+ExecStart=/usr/bin/python3 /path/to/sweetmeter/server.py
 WorkingDirectory=/path/to/sweetmeter
 Restart=always
 User=nobody
