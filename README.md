@@ -1,9 +1,11 @@
 
 > Documantation is still in beta
 
-# SweetMeter 🍬📈 (v1.0.1)
+# SweetMeter 🍬📈 
 
 **SweetMeter** is a lightweight, self-hostable CGM (Continuous Glucose Monitoring) API server compatible with the [Nightscout API](https://github.com/nightscout/cgm-remote-monitor). It’s built in Python for speed, simplicity, and extremely low resource usage — even small $5/month VPS instances can run it effortlessly.
+
+> **SweetMeter v1.0.1**
 
 ## 🚀 Features
 
