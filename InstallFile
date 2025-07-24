@@ -1,5 +1,0 @@
-
-exec
-    python3 -m venv 
-    python3 setup.py
-end

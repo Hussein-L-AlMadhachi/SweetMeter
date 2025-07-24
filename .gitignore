@@ -1,3 +1,14 @@
-*.json
 *.txt
 *.png
+*.log
+__pycache__
+status.json
+
+
+# dangerous files with credentials
+config.json
+setup.py
+sync_config.json
+
+# removing clutter
+scrap/

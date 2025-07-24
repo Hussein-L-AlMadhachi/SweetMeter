@@ -1,0 +1,5 @@
+{
+    "boot_message": "📡 SweetMeter started successfully 🎛️",
+    "glucose_entry": "glucose reading",
+    "missed_reading": "WARNING: no readings received in 15 minutes !!!"
+}
