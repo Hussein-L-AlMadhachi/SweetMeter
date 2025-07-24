@@ -22,11 +22,23 @@
 
 ```
 git clone https://github.com/Hussein-L-AlMadhachi/SweetMeter.git
-```
+
 cd sweetmeter
 pip install -r requirements.txt
 # Edit config.json to suit your setup
 python server.py
+```
+you need to create `config.json` like so:
+```
+{
+    "telegram-bot-token" : telegram-bot-api-token,
+    "api-url-token" : any-random-32-character,
+    "language" : "english",
+    "chat-id" : telegram-chat-id,
+    "unit" : "mg/dl",
+    "port" : 5000
+}
+```
 
 ## 🛡️ Run as a systemd Service (Optional)
 
