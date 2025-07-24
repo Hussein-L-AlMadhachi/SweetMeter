@@ -66,6 +66,11 @@ sudo systemctl daemon-reexec
 sudo systemctl enable sweetmeter  
 sudo systemctl start sweetmeter  
 ```
+
+## XDrip+ integration
+
+use the url `https:yourdomain.com/your-api-url-token-in-config-json/` for XDrip+ and it will work automatically
+
 ## 🌍 Localization
 
 SweetMeter supports over 35 languages using JSON-based translation files.
@@ -117,9 +122,6 @@ just put any of those in the `language` field in `config.json` and it will work
 
 > check `sweetmeter.log` for any errors
 
-## XDrip+ integration
-
-use the url `https:yourdomain.com/your-api-url-token-in-config-json/` for XDrip+ and it will work automatically
 
 ## 🔒 Privacy Focused
 
