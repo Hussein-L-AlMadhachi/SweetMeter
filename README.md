@@ -10,7 +10,7 @@
 - ✅ Streams real-time glucose readings  
 - ✅ Optional Telegram integration  
 - ✅ Supports 35+ languages with graceful fallback  
-- ✅ Designed for personal and clinic use  
+- ✅ Designed for personal and clinic use(if glocuse readings are accurate from the transmitter)
 
 ## 🧰 Requirements
 
