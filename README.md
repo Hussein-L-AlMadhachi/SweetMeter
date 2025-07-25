@@ -33,7 +33,7 @@ cd sweetmeter
 sh install.sh
 ```
 
-then set up NGINX with SSL (automation is coming to this soon)
+then set up NGINX to forward to port 5000 to the outside world and then set up your SSL from Let's Encrypt (automation is coming to this soon)
 
 ## XDrip+ integration
 
