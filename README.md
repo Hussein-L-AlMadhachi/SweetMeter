@@ -31,45 +31,9 @@ git clone https://github.com/Hussein-L-AlMadhachi/SweetMeter.git
 
 cd sweetmeter
 sh install.sh
-# Edit config.json to suit your setup
-python server.py
-```
-you need to create `config.json` like so:
-```
-{
-    "telegram-bot-token" : telegram-bot-api-token,
-    "api-url-token" : any-random-32-character,
-    "language" : "english",
-    "chat-id" : telegram-chat-id,
-    "unit" : "mg/dl",
-    "port" : 5000
-}
 ```
 
-## 🛡️ Run as a systemd Service (Optional)
-
-Create a systemd unit file at /etc/systemd/system/sweetmeter.service:
-```
-[Unit]
-Description=SweetMeter CGM Server
-After=network.target
-
-[Service]
-ExecStart=/usr/bin/python3 /path/to/sweetmeter/server.py
-WorkingDirectory=/path/to/sweetmeter
-Restart=always
-User=nobody
-Environment=PYTHONUNBUFFERED=1
-
-[Install]
-WantedBy=multi-user.target
-```
-Then enable and start it:
-```
-sudo systemctl daemon-reexec  
-sudo systemctl enable sweetmeter  
-sudo systemctl start sweetmeter  
-```
+then set up NGINX with SSL (automation is coming to this soon)
 
 ## XDrip+ integration
 
