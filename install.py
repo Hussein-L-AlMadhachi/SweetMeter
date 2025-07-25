@@ -40,7 +40,7 @@ with open( "config1.json" , "w" ) as f:
 
 
 
-exit()
+
 
 
 
