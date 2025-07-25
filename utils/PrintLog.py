@@ -31,8 +31,7 @@ def print(*args):
         log_message += " " + str(arg)
 
     logger.info( log_message )
-    sys.stdout.write( log_message )
-
+    sys.stdout.write( log_message + "\n" )
 
 
 

@@ -3,12 +3,12 @@
 *.log
 __pycache__
 status.json
-
+venv/
 
 # dangerous files with credentials
 config.json
 setup.py
 sync_config.json
 
-# removing clutter
-scrap/
+# removing service file (because it is system's specific)
+sweetmeter.service

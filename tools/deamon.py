@@ -1,4 +1,6 @@
 import os
+import utils.Settings
+
 
 script = input( "Enter the python filename that you want to run: " )
 if " " in script or "/" in script or "\\" in script:
@@ -40,3 +42,6 @@ os.system(f"sudo systemctl stop {name}.service")
 os.system(f"sudo systemctl reload {name}.service")
 os.system(f"sudo systemctl start {name}.service")
 os.system(f"sudo systemctl enable {name}.service")
+
+
+utils.Settings.configs[""]

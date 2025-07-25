@@ -1,31 +1,46 @@
 import telebot
 
-import utils.Settings as Settings
+import utils.Settings
 import utils.Localize as Localize
 
 
 
 
+telegram_token = utils.Settings.configs["telegram-bot-token"]
+chat = utils.Settings.configs["chat-id"]
 
-bot = telebot.TeleBot(  Settings.configs["telegram-bot-token"]  )
-chat = Settings.configs["chat-id"]
+if utils.Settings.configs["testing"]:   # just so that you don't test on prod 💀
+    telegram_token = utils.Settings.configs["testing-telegram-bot-token"]
+    chat = utils.Settings.configs["testing-chat-id"]
+
+
+
+
+
+bot = telebot.TeleBot( telegram_token )
 
 
 
 
 
 def sendReading( sgv_value , delta , enhanced_delta ):
-    try:
-        if delta < 0:
-            enhanced_delta_str = str(enhanced_delta)
-            delta_str = str(delta)
-        else:
-            enhanced_delta_str = "+" + str(enhanced_delta)
-            delta_str = "+" + str(delta)
 
-        bot.send_message( chat, f"{Localize.message("glucose_entry")}: \n " + str(sgv_value)+ "  " + delta_str + "     |    d: " + enhanced_delta_str )
+    if delta == None:
+        delta = 0
+
+
+    if delta < 0:
+        enhanced_delta_str = str(enhanced_delta)
+        delta_str = str(delta)
+    else:
+        enhanced_delta_str = "+" + str(enhanced_delta)
+        delta_str = "+" + str(delta)
+
+    try:
+
+        bot.send_message( chat, f"{ Localize.message('glucose_entry') }: \n " + str(sgv_value)+ "  " + delta_str + "     |    d: " + enhanced_delta_str )
     except Exception as e:
-        print( str(__file__)+" Telegram bot ERROR 002: " , e )
+        print( str(__file__)+" Telegram bot ERROR 002: cannot send reading" , e )
 
 
 

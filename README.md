@@ -30,7 +30,7 @@
 git clone https://github.com/Hussein-L-AlMadhachi/SweetMeter.git
 
 cd sweetmeter
-pip install -r requirements.txt
+sh install.sh
 # Edit config.json to suit your setup
 python server.py
 ```
