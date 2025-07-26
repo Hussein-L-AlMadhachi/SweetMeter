@@ -11,4 +11,4 @@ setup.py
 sync_config.json
 
 # removing service file (because it is system's specific)
-sweetmeter.service
+*.service
