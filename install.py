@@ -1,7 +1,6 @@
 import os
 import json
 import base64
-import utils.Settings
 import utils.PrintLog
 
 
@@ -39,6 +38,10 @@ configs = {
 with open( "config.json" , "w" ) as f:
     f.write( json.dumps( configs , indent=4 ) )
 
+
+
+# after settings are written now you can open them with this
+import utils.Settings
 
 
 

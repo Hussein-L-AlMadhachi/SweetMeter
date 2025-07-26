@@ -34,7 +34,7 @@
 
 7. **`install.py`** to install this program and deploy it on the system (uses modules in `deploy` for this).
 
-7. **`install.sh`** installs basic programs required by `install.py` then it is automatically runs `install.py` to continue the deployment.
+8. **`install.sh`** installs basic programs required by `install.py` then it is automatically runs `install.py` to continue the deployment.
 
 
 ### Conventions and terminology:
