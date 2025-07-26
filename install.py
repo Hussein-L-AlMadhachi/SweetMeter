@@ -67,6 +67,7 @@ if len(choice) > 0 and choice[0].lower == "y":
 
 
 
+
 desc = "SweetMeter the NightScout API compatible CGM monitoring server"
 script = "server.py"
 current_dir = os.getcwd()
