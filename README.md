@@ -21,7 +21,7 @@
 ## 🧰 Requirements
 
 - Python 3.9 or newer  
-- A small VPS or local machine  
+- A small VPS (use Debian or Ubuntu for the installer to work, if you don't want to setup stuffs manually)
 - Telegram Bot Token
 
 ## ⚙️ Installation
@@ -33,7 +33,7 @@ cd sweetmeter
 sh install.sh
 ```
 
-then set up NGINX to forward to port 5000 to the outside world and then set up your SSL from Let's Encrypt (automation is coming to this soon)
+this will configure the installation and optionally it will prompt you to chose whether you went it to setup NGINX and Certbot SSL for you automatically (if you don't know what are those terms, then you probably need this).
 
 ## XDrip+ integration
 
@@ -41,12 +41,7 @@ use the url `https:yourdomain.com/your-api-url-token-in-config-json/` for XDrip+
 
 ## 🌍 Localization
 
-SweetMeter supports over 35 languages using JSON-based translation files.
-
-- Automatically selects language via Accept-Language header  
-- Falls back to English if a word is missing  
-- Add your own translations in the localization/
-- use existing files
+SweetMeter supports over 35 languages translations.
 
 ##### builtin supported languages:
 * `english`
@@ -88,7 +83,7 @@ SweetMeter supports over 35 languages using JSON-based translation files.
 
 just put any of those in the `language` field in `config.json` and it will work
 
-> check `sweetmeter.log` for any errors
+> check `sweetmeter.log` for any errors if things didn't work right (when something is wrong it will default to english)
 
 
 ## 🔒 Privacy Focused

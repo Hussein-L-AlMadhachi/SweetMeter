@@ -26,6 +26,15 @@
 
     * `deamon.py` CLI too to creates a SystemD deamon for python projects.
 
+5. **`deploy/`** modules used to setup the environment on servers or anything deployment related really (used mainly by `install.py`)
+
+    * `nginx.py` module with functions to setup NGINX and a free SSL with it
+
+6. **`server.py`** your entry point to the main backend application. it contains the routes calling the right functions to process readings and stream them over telegram using modules from "service".
+
+7. **`install.py`** to install this program and deploy it on the system (uses modules in `deploy` for this).
+
+7. **`install.sh`** installs basic programs required by `install.py` then it is automatically runs `install.py` to continue the deployment.
 
 
 ### Conventions and terminology:

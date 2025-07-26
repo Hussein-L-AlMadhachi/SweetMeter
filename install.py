@@ -6,7 +6,7 @@ import utils.PrintLog
 
 
 
-
+import deploy.nginx
 
 
 
@@ -22,6 +22,7 @@ print( "    Perfect!!" )
 
 
 chat_id = int(input( "\nEnter the chat id of where you want this program to stream the readings:  " ))
+print( "    Awesome!!" )
 
 
 configs = {
@@ -31,14 +32,33 @@ configs = {
     "chat-id" : chat_id,
     "language" : "english",
     "unit" : "mg/dl",
-    "listen" : "0.0.0.0",
+    "listen" : "127.0.0.1",
     "port" : 5000
 }
 
-with open( "config1.json" , "w" ) as f:
+with open( "config.json" , "w" ) as f:
     f.write( json.dumps( configs , indent=4 ) )
 
 
+
+
+print(
+    "\n\nTip: Let me save you the headache!\n" +
+    "NGINX and Certbot are **not optional**.\n" +
+    "If you haven't installed them — or don't even know what they are —\n" +
+    "let this installer take care of it and configure everything for you." +
+    "\n\nNote: you need a domain name before you continue the installtion at this point\n\n"
+)
+
+
+# nginx and certbot setup
+choice = input( "do you want a new SSL certificate from certbot? [y/n] " )
+if len(choice) > 0 and choice[0].lower == "y":
+    deploy.nginx.setup_nginx_certbot_ssl()
+
+choice = input( "wanna nginx configs? [y/n] " )
+if len(choice) > 0 and choice[0].lower == "y":
+    deploy.nginx.setup_nginx()
 
 
 
@@ -83,4 +103,5 @@ api_url_token = utils.Settings.configs["api-url-token"]
 domain = utils.Settings.configs["domain"]
 
 utils.PrintLog.print( f"\n\nuse https://{domain}/{api_url_token}/status.json in XDrip+ Cloud sync\n" )
+
 
