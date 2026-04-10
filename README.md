@@ -8,7 +8,6 @@
 
 - ✅ Focused on critical CGM functionality  
 - ✅ XDrip+ integration
-- ⭕ juggluco (in progress)
 - ✅ Lightweight and resource-friendly  
 - ✅ Streams real-time glucose readings  
 - ✅ Optional Telegram integration  
